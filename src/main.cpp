@@ -2,5 +2,6 @@
 
 int main()
 {
+    guess();
 	return 0;
 }
