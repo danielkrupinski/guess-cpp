@@ -3,4 +3,6 @@
 
 #include <iostream>
 
+void guess();
+
 #endif
