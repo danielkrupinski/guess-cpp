@@ -6,6 +6,15 @@ void guess()
     std::cout << "I will try to guess it\n";
     srand(time(NULL));
     int guess {rand()%100+1};
-    std::cout << "Is your number greater than " << guess << '?';
-    std::cout << "(Y)es/(N)o";
+    while(true)
+    {
+        std::cout << "Is your number greater than " << guess << " ?\n";
+        std::cout << "(Y)es/(N)o? ";
+        char answer {};
+        cin >> answer;
+        //if (answer == 'Y' || answer == 'y')
+            //something
+        //else 
+    }
+
 }
