@@ -11,10 +11,10 @@ void guess()
         std::cout << "Is your number greater than " << guess << " ?\n";
         std::cout << "(Y)es/(N)o? ";
         char answer {};
-        cin >> answer;
+        std::cin >> answer;
         //if (answer == 'Y' || answer == 'y')
             //something
-        //else 
+        //else
     }
 
 }
