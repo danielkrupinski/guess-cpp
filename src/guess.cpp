@@ -6,7 +6,7 @@ void guess()
     std::cout << "I will try to guess it\n";
     srand(time(NULL));
     int guess {rand()%100+1};
-    int guesses {};
+    std::vector<bool> checked(100);
     while(true)
     {
         ++guesses;
@@ -27,10 +27,13 @@ void guess()
                 std::cout << "Your number is " << guess;
                 break;
             }
-            //else
+            else answer = 'N';
         }
         if (answer == 'Y' || answer == 'y')
         {
+            for (int i=0; i!=checked.size(); ++i)
+                if (guess > i)
+                    checked[i] = true;
             while (true)
             {
                 int random {rand()%100+1};
@@ -43,6 +46,8 @@ void guess()
         }
         else
         {
+            for (int i=guess+1; i!=checked.size(); ++i)
+                checked[i] = true;
             while (true)
             {
                 int random {rand()%100+1};
