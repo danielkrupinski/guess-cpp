@@ -13,7 +13,7 @@ void guess()
         char answer {};
         std::cin >> answer;
         if (answer == 'Y' || answer == 'y')
-            for (int random {rand()%100+1})
+            while (int random {rand()%100+1})
                 if (random > guess)
                 {
                     guess = random;
