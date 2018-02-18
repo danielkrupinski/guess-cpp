@@ -6,23 +6,54 @@ void guess()
     std::cout << "I will try to guess it\n";
     srand(time(NULL));
     int guess {rand()%100+1};
+    int guesses {};
     while(true)
     {
-        if (guess!=100)
+        ++guesses;
+        char answer {};
+        bool fail {false};
+        if (guess!=100 && guesses < 5)
         {
             std::cout << "Is your number greater than " << guess << " ?\n";
             std::cout << "(Y)es/(N)o? ";
+            std::cin >> answer;
         }
-        char answer {};
-        std::cin >> answer;
+        else
+        {
+            std::cout << "Is " << guess << " your number?\n";
+            std::cout << "(Y)es/(N)o? ";
+            std::cin >> answer;
+            if (answer == 'Y' || answer == 'y')
+            {
+                std::cout << "Your number is " << guess;
+                break;
+            }
+            else fail = true;
+        }
         if (answer == 'Y' || answer == 'y')
-            while (int random {rand()%100+1})
+        {
+            while (true)
+            {
+                int random {rand()%100+1};
                 if (random > guess)
                 {
                     guess = random;
                     break;
                 }
-        //else
+            }
+        }
+        else
+        {
+            while (true)
+            {
+                int random {rand()%100+1};
+                if (random < guess)
+                {
+                    guess = random;
+                    break;
+                }
+            }
+        }
     }
 
 }
