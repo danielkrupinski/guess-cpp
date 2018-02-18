@@ -12,8 +12,13 @@ void guess()
         std::cout << "(Y)es/(N)o? ";
         char answer {};
         std::cin >> answer;
-        //if (answer == 'Y' || answer == 'y')
-            //something
+        if (answer == 'Y' || answer == 'y')
+            for (int random {rand%100+1})
+                if (random > guess)
+                {
+                    guess = random;
+                    break;
+                }
         //else
     }
 
