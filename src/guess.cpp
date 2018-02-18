@@ -11,7 +11,6 @@ void guess()
     {
         ++guesses;
         char answer {};
-        bool fail {false};
         if (guess!=100 && guesses < 5)
         {
             std::cout << "Is your number greater than " << guess << " ?\n";
@@ -28,7 +27,7 @@ void guess()
                 std::cout << "Your number is " << guess;
                 break;
             }
-            else fail = true;
+            //else
         }
         if (answer == 'Y' || answer == 'y')
         {
