@@ -1,5 +1,4 @@
-before_install:
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 20
+env: CXX=g++-7
 language: cpp
 compiler: g++
 script:
