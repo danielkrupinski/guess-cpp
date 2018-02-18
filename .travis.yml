@@ -1,2 +1,3 @@
+before_install: sudo apt-get install g++
 language: cpp
 script: make
