@@ -2,7 +2,6 @@
 #define GUESS_H
 
 #include <iostream>
-#include <vector>
 
 void guess();
 

@@ -6,55 +6,48 @@ void guess()
     std::cout << "I will try to guess it\n";
     srand(time(NULL));
     int guess {rand()%100+1};
-    std::vector<int> checked(101);
-    while(true)
+    while (true)
     {
-        int count {};
-        for (int i=1; i!= checked.size(); ++i)
-            if (checked[i] == 0)
-                ++count;
-        char answer {};
-        if (guess!=100)
+        std::cout << "Is your number lower or higher or equal " << guess << " ?\n";
+        std::cout << "(L)ower, (H)igher, (E)qual?";
+        char answer{};
+        std::cin >> answer;
+        switch (answer)
         {
-            std::cout << "Is your number greater than " << guess << " ?\n";
-            std::cout << "(Y)es/(N)o? ";
-            std::cin >> answer;
-        }
-        else if (count == 2)
-        {
-                std::cout << "Your number is " << guess << ".\n";
+            case 'L':
+                guess = rand()%(guess-1)+1;
                 break;
-        }
-        if (answer == 'Y' || answer == 'y')
-        {
-            for (int i=0; i!=checked.size(); ++i)
-                if (guess > i)
-                    checked[i] = 1;
-            while (true)
-            {
-                int random {rand()%100+1};
-                if (random > guess)
+            case 'l':
+                guess = rand()%(guess-1)+1;
+                break;
+            case 'H':
+                while(true)
                 {
-                    guess = random;
-                    break;
+                    int new_guess = rand()%100+1;
+                    if (guess < new_guess)
+                    {
+                        guess = new_guess;
+                        break;
+                    }
                 }
-            }
-        }
-        else
-        {
-            for (int i=1; i!=checked.size(); ++i)
-                if (guess < i)
-                    checked[i] = 1;
-            while (true)
-            {
-                int random {rand()%100+1};
-                if (random < guess)
+                break;
+            case 'h':
+                while(true)
                 {
-                    guess = random;
-                    break;
+                    int new_guess = rand()%100+1;
+                    if (guess < new_guess)
+                    {
+                        guess = new_guess;
+                        break;
+                    }
                 }
-            }
+                break;
+            case 'E':
+                std::cout << "Your number is " << guess << " !\n";
+                return;
+            case 'e':
+                std::cout << "Your number is " << guess << " !\n";
+                return;
         }
     }
-
 }
