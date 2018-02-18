@@ -1,4 +1,4 @@
 language: cpp
 compiler: g++
 script:
-  - make CXX=g++-7
+  - make
