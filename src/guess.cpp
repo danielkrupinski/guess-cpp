@@ -8,8 +8,11 @@ void guess()
     int guess {rand()%100+1};
     while(true)
     {
-        std::cout << "Is your number greater than " << guess << " ?\n";
-        std::cout << "(Y)es/(N)o? ";
+        if (guess!=100)
+        {
+            std::cout << "Is your number greater than " << guess << " ?\n";
+            std::cout << "(Y)es/(N)o? ";
+        }
         char answer {};
         std::cin >> answer;
         if (answer == 'Y' || answer == 'y')
