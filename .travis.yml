@@ -7,11 +7,7 @@ addons:
 before_install:
   - sudo apt-get update
   - sudo apt-get install g++-7
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8.4 1
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 2
-  - sudo update-alternatives --install /usr/bin/c++ c++ /usr/bin/g++ 3
-  - sudo update-alternatives --set c++ /usr/bin/g++
-  - sudo update-alternatives --config g++
+  - g++ --version
 language: cpp
 compiler: g++
 script: make
