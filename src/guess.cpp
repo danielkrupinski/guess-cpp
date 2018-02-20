@@ -6,6 +6,7 @@ void guess()
     std::cout << "I will try to guess it\n";
     srand(time(NULL));
     int guess {rand()%100+1};
+    int high {}, low {};
     while (true)
     {
         std::cout << "Is your number lower or higher or equal " << guess << " ?\n";
@@ -15,16 +16,35 @@ void guess()
         switch (answer)
         {
             case 'L':
-                guess = rand()%(guess-1)+1;
-                break;
-            case 'l':
-                guess = rand()%(guess-1)+1;
-                break;
-            case 'H':
+                high = guess;
                 while(true)
                 {
                     int new_guess = rand()%100+1;
-                    if (guess < new_guess)
+                    if (new_guess < high && new_guess > low)
+                    {
+                        guess = new_guess;
+                        break;
+                    }
+                }
+                break;
+            case 'l':
+                high = guess;
+                while(true)
+                {
+                    int new_guess = rand()%100+1;
+                    if (new_guess < high && new_guess > low)
+                    {
+                        guess = new_guess;
+                        break;
+                    }
+                }
+                break;
+            case 'H':
+                low = guess;
+                while(true)
+                {
+                    int new_guess = rand()%100+1;
+                    if (new_guess > low && new_guess < high)
                     {
                         guess = new_guess;
                         break;
@@ -32,10 +52,11 @@ void guess()
                 }
                 break;
             case 'h':
+                low = guess;
                 while(true)
                 {
                     int new_guess = rand()%100+1;
-                    if (guess < new_guess)
+                    if (new_guess > low && new_guess < high)
                     {
                         guess = new_guess;
                         break;
