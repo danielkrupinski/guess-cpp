@@ -6,17 +6,22 @@ void Guess::ask(const int& guess)
     std::cout << "(L)ower, (H)igher, (E)qual?";
 }
 
+void Guess::init()
+{
+    std::cout << "Think of a number between 1 and 100\n";
+    std::cout << "I will try to guess it\n";
+    srand(time(NULL));
+}
+
 char& Guess::answer()
 {
     char answer{};
     std::cin >> answer;
     return answer;
 }
+
 void Guess::guess()
 {
-    std::cout << "Think of a number between 1 and 100\n";
-    std::cout << "I will try to guess it\n";
-    srand(time(NULL));
     int guess {rand()%100+1};
     int low {0}, high {101};
     while (true)
