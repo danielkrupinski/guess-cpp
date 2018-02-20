@@ -6,7 +6,7 @@ void Guess::ask(const int& guess)
     std::cout << "(L)ower, (H)igher, (E)qual?";
 }
 
-char Guess::answer()
+char& Guess::answer()
 {
     char answer{};
     std::cin >> answer;
