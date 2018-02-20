@@ -9,7 +9,7 @@ void guess()
     int low {0}, high {101};
     while (true)
     {
-        std::cout << "Is your number lower or higher or equal " << guess << " ?\n";
+        std::cout << "Is your number lower or higher or equal " << guess << "?\n";
         std::cout << "(L)ower, (H)igher, (E)qual?";
         char answer{};
         std::cin >> answer;
@@ -64,10 +64,10 @@ void guess()
                 }
                 break;
             case 'E':
-                std::cout << "Your number is " << guess << " !\n";
+                std::cout << "Your number is " << guess << "!\n";
                 return;
             case 'e':
-                std::cout << "Your number is " << guess << " !\n";
+                std::cout << "Your number is " << guess << "!\n";
                 return;
         }
     }
