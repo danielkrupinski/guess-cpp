@@ -1,5 +1,11 @@
 #include "../include/guess.h"
 
+void Guess::ask(const int& guess)
+{
+    std::cout << "Is your number lower or higher or equal " << guess << "?\n";
+    std::cout << "(L)ower, (H)igher, (E)qual?";
+}
+
 void Guess::guess()
 {
     std::cout << "Think of a number between 1 and 100\n";
@@ -9,8 +15,7 @@ void Guess::guess()
     int low {0}, high {101};
     while (true)
     {
-        std::cout << "Is your number lower or higher or equal " << guess << "?\n";
-        std::cout << "(L)ower, (H)igher, (E)qual?";
+        ask(guess);
         char answer{};
         std::cin >> answer;
         switch (answer)
