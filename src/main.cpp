@@ -2,6 +2,6 @@
 
 int main()
 {
-    guess();
+    Guess::guess();
 	return 0;
 }

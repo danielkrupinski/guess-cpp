@@ -3,6 +3,8 @@
 
 #include <iostream>
 
-void guess();
+namespace Guess {
+    void guess();
+}
 
 #endif
