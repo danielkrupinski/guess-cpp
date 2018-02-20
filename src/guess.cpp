@@ -6,7 +6,7 @@ void guess()
     std::cout << "I will try to guess it\n";
     srand(time(NULL));
     int guess {rand()%100+1};
-    int high {}, low {};
+    int low {0}, high {100};
     while (true)
     {
         std::cout << "Is your number lower or higher or equal " << guess << " ?\n";
