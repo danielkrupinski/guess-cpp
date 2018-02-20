@@ -5,7 +5,7 @@
 
 namespace Guess {
     void ask(const int&);
-
+    char answer();
     void guess();
 }
 

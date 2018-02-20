@@ -6,6 +6,12 @@ void Guess::ask(const int& guess)
     std::cout << "(L)ower, (H)igher, (E)qual?";
 }
 
+char Guess::answer()
+{
+    char answer{};
+    std::cin >> answer;
+    return answer;
+}
 void Guess::guess()
 {
     std::cout << "Think of a number between 1 and 100\n";
@@ -16,9 +22,7 @@ void Guess::guess()
     while (true)
     {
         ask(guess);
-        char answer{};
-        std::cin >> answer;
-        switch (answer)
+        switch (answer())
         {
             case 'L':
                 high = guess;
