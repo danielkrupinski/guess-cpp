@@ -13,7 +13,7 @@ void Guess::init()
     srand(time(NULL));
 }
 
-char& Guess::answer()
+char Guess::answer()
 {
     char answer{};
     std::cin >> answer;
