@@ -5,7 +5,9 @@
 
 class Guess {
     private:
-
+        int guess;
+        int high;
+        int low;
     public:
         Guess();
         void init();
