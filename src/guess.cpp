@@ -67,5 +67,5 @@ void Guess::too_low()
 void Guess::equal()
 {
             std::cout << "Your number is " << guess << "!\n";
-            return;
+            exit(0);
 }
