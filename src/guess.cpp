@@ -27,62 +27,37 @@ void Guess::guess()
     while (true)
     {
         ask(guess);
-        switch (answer())
+        char answer = answer();
+        if (answer == 'L' || 'l')
         {
-            case 'L':
-                high = guess;
-                while(true)
+            high = guess;
+            while(true)
+            {
+                int new_guess = rand()%100+1;
+                if (new_guess < high && new_guess > low)
                 {
-                    int new_guess = rand()%100+1;
-                    if (new_guess < high && new_guess > low)
-                    {
-                        guess = new_guess;
-                        break;
-                    }
+                    guess = new_guess;
+                    break;
                 }
-                break;
-            case 'l':
-                high = guess;
-                while(true)
-                {
-                    int new_guess = rand()%100+1;
-                    if (new_guess < high && new_guess > low)
-                    {
-                        guess = new_guess;
-                        break;
-                    }
-                }
-                break;
-            case 'H':
-                low = guess;
-                while(true)
-                {
-                    int new_guess = rand()%100+1;
-                    if (new_guess > low && new_guess < high)
-                    {
-                        guess = new_guess;
-                        break;
-                    }
-                }
-                break;
-            case 'h':
-                low = guess;
-                while(true)
-                {
-                    int new_guess = rand()%100+1;
-                    if (new_guess > low && new_guess < high)
-                    {
-                        guess = new_guess;
-                        break;
-                    }
-                }
-                break;
-            case 'E':
-                std::cout << "Your number is " << guess << "!\n";
-                return;
-            case 'e':
-                std::cout << "Your number is " << guess << "!\n";
-                return;
+            }
         }
-    }
+        else if (answer == 'H' || 'h')
+        {
+            low = guess;
+            while(true)
+            {
+                int new_guess = rand()%100+1;
+                if (new_guess > low && new_guess < high)
+                {
+                    guess = new_guess;
+                    break;
+                }
+            }
+        }
+        else if (answer == 'E' || 'e')
+        {
+            std::cout << "Your number is " << guess << "!\n";
+            return;
+        }
+    }    
 }
