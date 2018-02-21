@@ -6,9 +6,9 @@ Guess::Guess()
     guess = rand()%100+1;
     high = 101;
     low = 0;
+    init();
     while(true)
     {
-        init();
         ask();
         answer();
     }
