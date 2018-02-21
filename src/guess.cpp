@@ -27,8 +27,8 @@ void Guess::guess()
     while (true)
     {
         ask(guess);
-        char answer = answer();
-        if (answer == 'L' || 'l')
+        char answr = answer();
+        if (answr == 'L' || 'l')
         {
             high = guess;
             while(true)
@@ -41,7 +41,7 @@ void Guess::guess()
                 }
             }
         }
-        else if (answer == 'H' || 'h')
+        else if (answr == 'H' || 'h')
         {
             low = guess;
             while(true)
@@ -54,10 +54,10 @@ void Guess::guess()
                 }
             }
         }
-        else if (answer == 'E' || 'e')
+        else if (answr == 'E' || 'e')
         {
             std::cout << "Your number is " << guess << "!\n";
             return;
         }
-    }    
+    }
 }
