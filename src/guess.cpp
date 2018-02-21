@@ -27,13 +27,13 @@ void Guess::ask()
 
 void Guess::answer()
 {
-    char answer{};
+    char answer {};
     std::cin >> answer;
     if (answer == 'L' || answer == 'l')
         too_high();
     else if (answer == 'H' || answer == 'h')
         too_low();
-    else if (answer == 'E' || answer == 'e')
+    else
         equal();
 }
 
