@@ -2,6 +2,7 @@
 
 Guess::Guess()
 {
+    srand(time(NULL));
     guess = rand()%100+1;
     high = 101;
     low = 0;
@@ -10,7 +11,6 @@ void Guess::init()
 {
     std::cout << "Think of a number between 1 and 100\n";
     std::cout << "I will try to guess it\n";
-    srand(time(NULL));
 }
 
 void Guess::ask(const int& guess)
