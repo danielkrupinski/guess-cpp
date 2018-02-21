@@ -4,8 +4,8 @@
 #include <iostream>
 
 namespace Guess {
-    void ask(const int&);
     void init();
+    void ask(const int&);
     char answer();
     void guess();
 }
