@@ -20,6 +20,40 @@ char Guess::answer()
     return answer;
 }
 
+void Guess::too_high()
+{
+    if (answr == 'L' || 'l')
+    {
+        high = guess;
+        while(true)
+        {
+            int new_guess = rand()%100+1;
+            if (new_guess < high && new_guess > low)
+            {
+                guess = new_guess;
+                break;
+            }
+        }
+    }
+}
+
+
+void Guess::too_low()
+{
+    if (answr == 'H' || 'h')
+    {
+        low = guess;
+        while(true)
+        {
+            int new_guess = rand()%100+1;
+            if (new_guess > low && new_guess < high)
+            {
+                guess = new_guess;
+                break;
+            }
+        }
+    }
+}
 void Guess::guess()
 {
     int guess {rand()%100+1};
@@ -28,19 +62,7 @@ void Guess::guess()
     {
         ask(guess);
         char answr = answer();
-        if (answr == 'L' || 'l')
-        {
-            high = guess;
-            while(true)
-            {
-                int new_guess = rand()%100+1;
-                if (new_guess < high && new_guess > low)
-                {
-                    guess = new_guess;
-                    break;
-                }
-            }
-        }
+
         else if (answr == 'H' || 'h')
         {
             low = guess;
