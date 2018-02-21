@@ -11,8 +11,8 @@ class Guess {
     public:
         Guess();
         void init();
-        void ask(const int&);
-        char answer();
+        void ask();
+        void answer();
         void too_high();
         void too_low();
         void equal();
