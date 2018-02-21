@@ -3,13 +3,17 @@
 
 #include <iostream>
 
-namespace Guess {
-    void init();
-    void ask(const int&);
-    char answer();
-    void too_high();
-    void too_low();
-    void equal();
-}
+class Guess {
+    private:
+
+    public:
+        Guess();
+        void init();
+        void ask(const int&);
+        char answer();
+        void too_high();
+        void too_low();
+        void equal();
+};
 
 #endif

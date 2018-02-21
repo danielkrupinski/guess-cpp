@@ -17,7 +17,11 @@ char Guess::answer()
 {
     char answer{};
     std::cin >> answer;
-    return answer;
+    if (answer == 'L' || 'l')
+        too_high();
+    else if (answer == 'H' || 'h')
+        too_low();
+    else equal();
 }
 
 void Guess::too_high()
