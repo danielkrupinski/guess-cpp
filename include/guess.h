@@ -7,7 +7,6 @@ namespace Guess {
     void init();
     void ask(const int&);
     char answer();
-    void guess();
     void too_high();
     void too_low();
     void equal();

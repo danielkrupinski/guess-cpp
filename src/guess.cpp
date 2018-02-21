@@ -54,32 +54,11 @@ void Guess::too_low()
         }
     }
 }
-void Guess::guess()
+void Guess::equal()
 {
-    int guess {rand()%100+1};
-    int low {0}, high {101};
-    while (true)
-    {
-        ask(guess);
-        char answr = answer();
-
-        else if (answr == 'H' || 'h')
-        {
-            low = guess;
-            while(true)
-            {
-                int new_guess = rand()%100+1;
-                if (new_guess > low && new_guess < high)
-                {
-                    guess = new_guess;
-                    break;
-                }
-            }
-        }
-        else if (answr == 'E' || 'e')
+        if (answr == 'E' || 'e')
         {
             std::cout << "Your number is " << guess << "!\n";
             return;
         }
-    }
 }
