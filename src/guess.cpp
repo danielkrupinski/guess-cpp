@@ -6,6 +6,12 @@ Guess::Guess()
     guess = rand()%100+1;
     high = 101;
     low = 0;
+    while(true)
+    {
+        init();
+        ask();
+        answer();
+    }
 }
 void Guess::init()
 {
@@ -13,13 +19,13 @@ void Guess::init()
     std::cout << "I will try to guess it\n";
 }
 
-void Guess::ask(const int& guess)
+void Guess::ask()
 {
     std::cout << "Is your number lower or higher or equal " << guess << "?\n";
     std::cout << "(L)ower, (H)igher, (E)qual?";
 }
 
-char Guess::answer()
+void Guess::answer()
 {
     char answer{};
     std::cin >> answer;
