@@ -22,8 +22,6 @@ char Guess::answer()
 
 void Guess::too_high()
 {
-    if (answr == 'L' || 'l')
-    {
         high = guess;
         while(true)
         {
@@ -34,14 +32,11 @@ void Guess::too_high()
                 break;
             }
         }
-    }
 }
 
 
 void Guess::too_low()
 {
-    if (answr == 'H' || 'h')
-    {
         low = guess;
         while(true)
         {
@@ -52,13 +47,9 @@ void Guess::too_low()
                 break;
             }
         }
-    }
 }
 void Guess::equal()
 {
-        if (answr == 'E' || 'e')
-        {
             std::cout << "Your number is " << guess << "!\n";
             return;
-        }
 }
