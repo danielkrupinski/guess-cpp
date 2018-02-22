@@ -2,6 +2,6 @@
 
 int main()
 {
-    Guess* guess = new Guess;
+    Guess guess;
 	return 0;
 }
