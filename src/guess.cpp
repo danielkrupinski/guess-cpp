@@ -6,13 +6,10 @@ Guess::Guess()
     guess = rand()%100+1;
     high = 101;
     low = 0;
+    in_progress = true;
     init();
-    while(true)
-    {
-        ask();
-        answer();
-    }
 }
+
 void Guess::init()
 {
     std::cout << "Think of a number between 1 and 100\n";

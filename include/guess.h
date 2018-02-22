@@ -9,6 +9,7 @@ class Guess {
         int high;
         int low;
     public:
+        bool in_progress;
         Guess();
         void init();
         void ask();

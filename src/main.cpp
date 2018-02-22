@@ -2,6 +2,12 @@
 
 int main()
 {
-    Guess guess;
+    Guess* guess = new Guess;
+    while (guess->in_progress)
+    {
+        guess->ask();
+        guess->answer();
+    }
+    delete guess;
 	return 0;
 }
