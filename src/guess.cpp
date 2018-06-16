@@ -26,12 +26,17 @@ void Guess::answer()
 {
     char answer;
     std::cin >> answer;
-    if (answer == 'L' || answer == 'l')
+    switch (tolower(answer)) {
+    case 'l':
         too_high();
-    else if (answer == 'H' || answer == 'h')
+        break;
+    case 'h':
         too_low();
-    else
+        break;
+    case 'e':
         equal();
+        break;
+    }
 }
 
 void Guess::too_high()
