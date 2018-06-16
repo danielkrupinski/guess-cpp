@@ -13,7 +13,7 @@ Guess::Guess()
 void Guess::init()
 {
     std::cout << "Think of a number between 1 and 100\n";
-    std::cout << "I will try to guess it\n";
+                 "I will try to guess it\n";
 }
 
 void Guess::ask()
@@ -36,34 +36,34 @@ void Guess::answer()
 
 void Guess::too_high()
 {
-        high = guess;
-        while(true)
+    high = guess;
+    while(true)
+    {
+        int new_guess = rand()%100+1;
+        if (new_guess < high && new_guess > low)
         {
-            int new_guess = rand()%100+1;
-            if (new_guess < high && new_guess > low)
-            {
-                guess = new_guess;
-                break;
-            }
+            guess = new_guess;
+            break;
         }
+    }
 }
 
 
 void Guess::too_low()
 {
-        low = guess;
-        while(true)
+    low = guess;
+    while(true)
+    {
+        int new_guess = rand()%100+1;
+        if (new_guess > low && new_guess < high)
         {
-            int new_guess = rand()%100+1;
-            if (new_guess > low && new_guess < high)
-            {
-                guess = new_guess;
-                break;
-            }
+            guess = new_guess;
+            break;
         }
+    }
 }
 void Guess::equal()
 {
-            std::cout << "Your number is " << guess << "!\n";
-            exit(0);
+    std::cout << "Your number is " << guess << "!\n";
+    exit(0);
 }
