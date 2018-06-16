@@ -24,7 +24,7 @@ void Guess::ask()
 
 void Guess::answer()
 {
-    char answer {};
+    char answer;
     std::cin >> answer;
     if (answer == 'L' || answer == 'l')
         too_high();
