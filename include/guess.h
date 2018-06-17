@@ -9,7 +9,6 @@ private:
     int high{101};
     int low{0};
 public:
-    bool isInProgress{true};
     Guess();
     void processInput();
     void guessNext(bool);
