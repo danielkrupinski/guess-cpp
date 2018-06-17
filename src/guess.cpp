@@ -8,19 +8,11 @@ Guess::Guess()
                  "I will try to guess it\n";
 }
 
-void Guess::ask()
-{
-
-}
-
 void Guess::processInput()
 {
     std::cout << "Is your number lower or higher or equal " << guess << "?\n";
     std::cout << "(L)ower, (H)igher, (E)qual? ";
-}
 
-void Guess::answer()
-{
     char answer;
     std::cin >> answer;
     switch (tolower(answer)) {
@@ -34,6 +26,11 @@ void Guess::answer()
         equal();
         break;
     }
+}
+
+void Guess::answer()
+{
+
 }
 
 void Guess::too_high()
