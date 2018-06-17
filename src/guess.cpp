@@ -28,18 +28,6 @@ void Guess::processInput()
     }
 }
 
-void Guess::too_high()
-{
-    high = guess;
-    while(true) {
-        int new_guess = rand() % 100 + 1;
-        if (new_guess < high && new_guess > low) {
-            guess = new_guess;
-            break;
-        }
-    }
-}
-
 void Guess::equal()
 {
     std::cout << "Your number is " << guess << "!\n";
