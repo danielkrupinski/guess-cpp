@@ -4,13 +4,13 @@ Guess::Guess()
 {
     srand(time(NULL));
     guess = rand()%100+1;
-    init();
+    std::cout << "Think of a number between 1 and 100\n";
+                 "I will try to guess it\n";
 }
 
 void Guess::init()
 {
-    std::cout << "Think of a number between 1 and 100\n";
-                 "I will try to guess it\n";
+
 }
 
 void Guess::ask()
