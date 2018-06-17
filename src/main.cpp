@@ -3,7 +3,7 @@
 int main()
 {
     Guess guess;
-    while (guess.in_progress)
+    while (guess.isInProgress)
     {
         guess.ask();
         guess.answer();
