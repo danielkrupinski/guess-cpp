@@ -51,4 +51,5 @@ void Guess::guessNext(bool isTooHigh)
             }
         }
     }
+    processInput();
 }

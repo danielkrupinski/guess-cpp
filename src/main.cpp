@@ -3,10 +3,6 @@
 int main()
 {
     Guess guess;
-    while (guess.isInProgress)
-    {
-        guess.ask();
-        guess.answer();
-    }
+    guess.processInput();
 	return 0;
 }
