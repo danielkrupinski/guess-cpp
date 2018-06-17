@@ -4,14 +4,14 @@
 #include <iostream>
 
 class Guess {
-private:
-    int guess;
-    int high{101};
-    int low{0};
 public:
     Guess();
     void processInput();
     void guessNext(bool);
+private:
+    int guess;
+    int high{101};
+    int low{0};
 };
 
 #endif
