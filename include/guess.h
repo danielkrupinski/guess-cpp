@@ -6,10 +6,10 @@
 class Guess {
 private:
     int guess;
-    int high;
-    int low;
+    int high{101};
+    int low{0};
 public:
-    bool in_progress;
+    bool in_progress{true};
     Guess();
     void init();
     void ask();

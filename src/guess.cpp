@@ -4,9 +4,6 @@ Guess::Guess()
 {
     srand(time(NULL));
     guess = rand()%100+1;
-    high = 101;
-    low = 0;
-    in_progress = true;
     init();
 }
 
