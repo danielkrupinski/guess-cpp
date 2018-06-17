@@ -11,7 +11,6 @@ private:
 public:
     bool isInProgress{true};
     Guess();
-    void ask();
     void answer();
     void too_high();
     void too_low();
