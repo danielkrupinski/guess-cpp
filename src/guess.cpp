@@ -8,11 +8,6 @@ Guess::Guess()
                  "I will try to guess it\n";
 }
 
-void Guess::init()
-{
-
-}
-
 void Guess::ask()
 {
     std::cout << "Is your number lower or higher or equal " << guess << "?\n";
