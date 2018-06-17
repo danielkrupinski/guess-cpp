@@ -28,11 +28,6 @@ void Guess::processInput()
     }
 }
 
-void Guess::answer()
-{
-
-}
-
 void Guess::too_high()
 {
     high = guess;
