@@ -57,3 +57,8 @@ void Guess::equal()
     std::cout << "Your number is " << guess << "!\n";
     exit(0);
 }
+
+void Guess::guessNext(bool isTooHigh)
+{
+
+}

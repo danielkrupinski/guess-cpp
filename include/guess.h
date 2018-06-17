@@ -15,7 +15,7 @@ public:
     void too_low();
     void equal();
     void processInput();
-    void guessNext();
+    void guessNext(bool isTooHigh);
 };
 
 #endif
