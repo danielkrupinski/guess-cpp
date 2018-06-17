@@ -23,7 +23,8 @@ void Guess::processInput()
         guessNext(false);
         break;
     case 'e':
-        equal();
+        std::cout << "Your number is " << guess << "!\n";
+        exit(0);
         break;
     }
 }
