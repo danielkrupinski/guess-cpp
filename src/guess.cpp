@@ -17,10 +17,10 @@ void Guess::processInput()
     std::cin >> answer;
     switch (tolower(answer)) {
     case 'l':
-        too_high();
+        guessNext(true);
         break;
     case 'h':
-        too_low();
+        guessNext(false);
         break;
     case 'e':
         equal();
