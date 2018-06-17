@@ -39,11 +39,9 @@ void Guess::answer()
 void Guess::too_high()
 {
     high = guess;
-    while(true)
-    {
-        int new_guess = rand()%100+1;
-        if (new_guess < high && new_guess > low)
-        {
+    while(true) {
+        int new_guess = rand() % 100 + 1;
+        if (new_guess < high && new_guess > low) {
             guess = new_guess;
             break;
         }
@@ -54,11 +52,9 @@ void Guess::too_high()
 void Guess::too_low()
 {
     low = guess;
-    while(true)
-    {
-        int new_guess = rand()%100+1;
-        if (new_guess > low && new_guess < high)
-        {
+    while(true) {
+        int new_guess = rand() % 100 + 1;
+        if (new_guess > low && new_guess < high) {
             guess = new_guess;
             break;
         }
