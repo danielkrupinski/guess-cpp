@@ -14,6 +14,11 @@ void Guess::ask()
     std::cout << "(L)ower, (H)igher, (E)qual?";
 }
 
+void processInput()
+{
+    
+}
+
 void Guess::answer()
 {
     char answer;
