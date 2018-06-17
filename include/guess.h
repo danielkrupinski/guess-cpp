@@ -11,7 +11,6 @@ private:
 public:
     bool isInProgress{true};
     Guess();
-    void equal();
     void processInput();
     void guessNext(bool);
 };
