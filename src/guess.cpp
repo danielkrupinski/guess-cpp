@@ -60,5 +60,24 @@ void Guess::equal()
 
 void Guess::guessNext(bool isTooHigh)
 {
-
+    if (isTooHigh) {
+        high = guess;
+        while(true) {
+            int new_guess = rand() % 100 + 1;
+            if (new_guess < high && new_guess > low) {
+                guess = new_guess;
+                break;
+            }
+        }
+    }
+    else {
+        low = guess;
+        while(true) {
+            int new_guess = rand() % 100 + 1;
+            if (new_guess > low && new_guess < high) {
+                guess = new_guess;
+                break;
+            }
+        }
+    }
 }
