@@ -1,4 +1,4 @@
-#include "../include/guess.h"
+#include <guess.h>
 
 int main()
 {
