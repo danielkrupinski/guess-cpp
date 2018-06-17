@@ -17,6 +17,7 @@ public:
     void too_high();
     void too_low();
     void equal();
+    void processInput();
     void guessNext();
 };
 
