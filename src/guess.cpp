@@ -10,13 +10,13 @@ Guess::Guess()
 
 void Guess::ask()
 {
-    std::cout << "Is your number lower or higher or equal " << guess << "?\n";
-    std::cout << "(L)ower, (H)igher, (E)qual?";
+
 }
 
-void processInput()
+void Guess::processInput()
 {
-    
+    std::cout << "Is your number lower or higher or equal " << guess << "?\n";
+    std::cout << "(L)ower, (H)igher, (E)qual? ";
 }
 
 void Guess::answer()
