@@ -3,7 +3,7 @@
 Guess::Guess()
 {
     srand(time(NULL));
-    guess = rand()%100+1;
+    guess = rand() % 100 + 1;
     std::cout << "Think of a number between 1 and 100\n";
                  "I will try to guess it\n";
 }
@@ -33,7 +33,7 @@ void Guess::guessNext(bool isTooHigh)
 {
     if (isTooHigh) {
         high = guess;
-        while(true) {
+        while (true) {
             int new_guess = rand() % 100 + 1;
             if (new_guess < high && new_guess > low) {
                 guess = new_guess;
@@ -43,7 +43,7 @@ void Guess::guessNext(bool isTooHigh)
     }
     else {
         low = guess;
-        while(true) {
+        while (true) {
             int new_guess = rand() % 100 + 1;
             if (new_guess > low && new_guess < high) {
                 guess = new_guess;
